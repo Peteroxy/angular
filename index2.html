@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RootScope</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <p>The rootscopes favorite color: </p>
+    <h1>{{color}}</h1>
+
+    <div ng-controller="myctrl">
+        <p>The scope of the controller's favourite color: </p>
+        <h1>{{color}}</h1>
+    </div>
+    <p>The rootscope's favourite color is still</p>
+    <h1>{{color}}</h1>
+
+    <script>
+        var app =angular.module("myApp", []);
+        app.run(function($rootScope){
+            $rootScope.color ="blue"
+        });
+        app.controller("myctrl", function($scope){
+            $scope.color="red"
+        })
+    </script>
+</body>
+</html>

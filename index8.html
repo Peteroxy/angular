@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout2</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <!-- <div ng-app="myApp" ng-controller="myctrl">
+        <h1>{{theTime}}</h1>
+    </div>
+    
+    <script>
+        var app = angular.module("myApp", [])
+        app.controller("myctrl", function($scope, $interval){
+            $scope.theTime=new Date().toLocaleTimeString();
+            $interval(function(){
+                $scope.theTime=new Date().toLocaleTimeString();
+            }, 1000);
+        })
+    </script> -->
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <h1>{{hex}}</h1>
+
+    </div>
+
+    <script>
+        var app = angular.module("myApp", [])
+        app.service("hexafy", function(){
+            this.myfunc=function(x){
+                return x.toString(16);
+            }
+        });
+        app.controller("myctrl", function($scope, hexafy){
+            $scope.hex = hexafy.myfunc(255);
+        })
+    </script>
+</body>
+</html>

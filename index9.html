@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTOM DIRECTIVE</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <!-- you can call as a tag(line 11) and attribute(line 19). line 11 is used with - and line 16 is camel case. we can use ECMA-ELEMENT CLASS COMMET ATTRIBUTE -->
+    <!-- <div ng-app="myApp">
+        <w3-test-directive></w3-test-directive>
+        <div w3-test-directive></div>
+
+    </div>
+    
+    <script>
+        var app=angular.module("myApp", []);
+        app.directive('w3TestDirective', function(){
+            return{
+                template:'<h1>made by a directive</h1>'
+            };
+        }); -->
+
+
+        <!-- <div ng-app="myApp"> -->
+        <!-- directive:w3-test-directive -->
+    <!-- </div> -->
+    
+    <!-- <script>
+        var app=angular.module("myApp", []);
+        app.directive('w3TestDirective', function(){
+            return{
+                restrict:"M",
+                replace:'true',
+                template:'<h1>made by a directive</h1>'
+            };
+        }); -->
+
+
+        <div ng-app="myApp">
+            <!-- directive:w3-test-directive -->
+            <div class="w3-test-directive"></div>
+            <w3-test-directive></w3-test-directive>
+            <div w3-test-directive></div>
+        </div>
+        
+        <script>
+            var app=angular.module("myApp", []);
+            app.directive('w3TestDirective', function(){
+                return{
+                    restrict:'ECMA',
+                    replace:true,
+                    template:'<h1>made by a directive</h1>'
+                };
+            });
+        </script>
+    </script>
+</body>
+</html>

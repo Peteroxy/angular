@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <h1 id="date"></h1>
+    <!-- <div data-ng-app="">
+        <p>Name:<input type="text" ng-model="name"></p>
+        <h1 ng-bind ="name"></h1>
+        <h4>{{ name }}</h4>
+        <h4>{{ 5+5 }}</h4>
+
+        <p>Name:<input type="text" ng-model="color" style="background-color: {{ color }};"></p>
+    </div> -->
+<!-- 
+    <div ng-app="" ng-init="firstno=25; secondno=27">
+        <p>Total number is:{{firstno + secondno}}</p>
+
+    </div> -->
+<!-- 
+    <div ng-app="" ng-init="quantity=5; cost=250">
+        <p>The total in dollars is : {{quantity*cost}}</p>
+        <p>The total in dollars is : <span ng-bind="quantity*cost"></span></p>
+
+    </div> -->
+    <!-- <div ng-app="" ng-init="firstname='Ehiz'; lastname='Micheal'">
+        <p>Welcome to class Mr {{firstname + " " + lastname}}</p>
+    </div> -->
+    <!-- <div ng-app="" ng-init="person={firstname:'Ehiz', lastname:'Micheal'}">
+        <p>The name is {{person.firstname}}</p>
+
+    </div> -->
+
+    <!-- <div ng-app="" ng-init="point=[2,3,4,5,67,8]">
+        <p>the third value is : {{point[2]}}</p>
+    </div> -->
+
+    <!-- <div ng-app="" ng-init="cars=['mercedes', 'volks', 'g-wagon', 'toyota']">
+        <p>The first car is : {{cars[0]}}</p>
+        <p>The second car is : {{cars[1]}}</p>
+        <button id="button"></button>
+    </div> -->
+<!-- 
+    <div ng-app="" ng-init="num1=5; num2=3">
+
+        <p>The total is : {{num1 + num2}}</p>
+
+    </div> -->
+
+    <!-- <div ng-app="myApp"  ng-controller="myctrl">
+        {{firstname + " "+ lastname}}
+
+    </div>
+
+    <script>
+       var app = angular.module("myApp", []);
+       app.controller("myctrl", function($scope){
+        $scope.lastname = "micheal";
+        $scope.firstname="ehiz"
+ 
+       })
+    </script> -->
+
+    <!-- <div ng-app="myApp"  ng-controller="myctrl">
+        <input type="text"ng-model="firstname" >
+        {{firstname}}
+
+    </div>
+
+    <script>
+       var app = angular.module("myApp", []);
+       app.controller("myctrl", function($scope){
+        $scope.firstname = "micheal";
+       })
+    </script> -->
+
+    <!-- <div ng-app="myApp" ng-controller="myctrl">
+        {{firstname + " " + lastname}}
+    </div> -->
+
+    <!-- <div ng-app="" ng-init="names=['Peter', 'Mark', 'Divine']">
+        <ul>
+            <li ng-repeat="names in names">
+                {{names}}
+            </li>
+        </ul>
+
+    </div> -->
+
+    <!-- <div ng-app="" ng-init="names=[
+        {name:'james', country:'Norway'},
+        {name:'Ehiz', country:'Italy'},
+        {name:'fawas', country:'usa'}
+        ]">
+        <ul>
+            <li ng-repeat="name in names">
+                {{name.name}}
+                {{name.country}}
+            </li>
+        </ul>
+
+    </div> -->
+
+    <!-- <div>
+        <p id="text">Hello world</p>
+        <button id="button">Transform</button>
+    </div> -->
+
+    <!-- <script>
+        var app=angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.demo="john"
+        });
+    </script>
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <input type="text" ng-model="demo">
+        {{demo}}
+
+    </div> -->
+
+
+    <!-- <script>
+        var app = angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.firstname="john";
+            $scope.changename = function(){
+                $scope.firstname = "Nelly";
+            }
+        })
+    </script>
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <h1 ng-click="changename()">
+            {{firstname}}
+        </h1>
+
+    </div> -->
+
+    <!-- <script>
+        var app =angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.firstname= "john";
+            $scope.lastname="Adunmoye";
+        });
+    </script>
+
+    <div ng-app="myApp" ng-controller="myctrl">
+       <h1>{{firstname + " " + lastname}}</h1>
+
+    </div> -->
+
+
+    <!-- <script>
+        var app =angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.firstname="john";
+            $scope.lastname="peter"
+            $scope.conc = function(){
+                 $scope.name = $scope.firstname + " " + $scope.lastname
+                console.log(name)
+                
+
+            }
+        })
+    </script>
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <input type="text" ng-model="firstname">
+        <input type="text" ng-model="lastname">
+        <button ng-click="conc()">concatenate</button>
+        {{name}}
+        
+    </div> -->
+
+<!-- 
+    <script>
+        var app =angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.firstnum=10;
+            $scope.secondnum=20;
+            $scope.multiply=function(){
+                $scope.ans=Number($scope.firstnum)+ Number($scope.secondnum)
+                console.log(num)
+            }
+        })
+    </script>
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <input type="text" ng-model="firstnum">
+        <input type="text" ng-model="secondnum">
+        <button ng-click="multiply()">Multiply</button>
+        {{ans}}
+
+    </div> -->
+
+    <!-- <div ng-app="" ng-init="names=[
+        {name:'peter',country:'nigeria'},
+        {name:'john',country:'cameroon'},
+        {name:'Fawas',country:'nigeria'}
+
+    ]">
+
+    <ul>
+        <li ng-repeat="name in names">
+            {{name.name}}
+            {{name.country}}
+
+        </li>
+    </ul>
+
+    </div> -->
+
+
+    <script>
+        var app =angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.name="John Doe"
+        })
+    </script>
+
+
+    <div ng-app="myApp" ng-controller="myctrl">
+        <input type="text" ng-model="name">
+        <h1>my name is {{name}}</h1>
+    </div>
+
+    <!-- <script src="myApp.js"></script>
+    <script src="myctrl.js"></script>
+    <script src="index.js"></script> -->
+   
+    
+</body>
+</html>

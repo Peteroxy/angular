@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.name + " " + x.age}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope, $http){
+            $http.get("http://127.0.0.1:5500/angularjs/app.json").then(function(response){
+                $scope.names = response.data.records;
+            });
+        });
+    </script>
+</body>
+</html>

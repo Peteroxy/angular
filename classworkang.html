@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+
+
+    
+    <div ng-app="myApp" ng-controller="myctrl">
+        <input type="text" ng-model="num">
+        <button ng-click="myFunction()">value</button>
+        <h4>The area is : {{area}}</h4>
+        <h5>The Circumference is : {{circum}}</h5>
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myctrl", function($scope){
+            $scope.pi = 3.142;
+            $scope.myFunction=function(){
+                $scope.area=$scope.pi * Number($scope.num) * Number($scope.num)
+                $scope.circum=$scope.pi * Number($scope.num) * 2
+
+            }
+        })
+    </script>
+    
+</body>
+</html>

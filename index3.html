@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filters</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <!-- <div ng-app="myApp" ng-controller="personctrl">
+        <p>the name is {{lastname | lowercase}}</p>
+
+        <script>
+            angular.module("myApp", []).controller("personctrl",function($scope){
+                $scope.firstname="john";
+                $scope.lastname="DOE"
+            })
+        </script>
+
+    </div> -->
+
+
+
+    <div ng-app="myApp" ng-controller="namesctrl">
+        <ul>
+            <li ng-repeat="x in names | orderBy:'name'">
+                {{x.name + " "+ x.country}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        angular.module("myApp",[]).controller("namesctrl",function($scope){
+            $scope.names=[
+                {name:'jan', country:'norway'},
+                {name:'cal', country:'swedden'},
+                {name:'ken', country:'nigeria'},
+                {name:'benny', country:'uganda'},
+                {name:'mark', country:'America'}
+            ];
+        });
+    </script>
+</body>
+</html>
